@@ -9,9 +9,9 @@ from scipy import optimize
 path = askdirectory(title='Select Folder')
 
 # Converting into Dataframe
-df = pd.read_csv(path+'\Trial1.csv')
-voltage = df['Voltage'].values
-current = df['Current'].values
+df = pd.read_csv(path+'\Form1.csv')
+peak_employee_count = df['PEAKEMPLOYEECOUNT'].values
+perm_full_time_count = df['PERMFULLTIMECOUNT'].values
 
 # Linear Least Squares Fit
 def Delta(x):
@@ -23,9 +23,9 @@ def B(x,y):
 def myquad(x, a,b,c):
   return a*(x-b)**2+c
 
-plt.errorbar(voltage, current, zorder=1)
-plt.plot(xtest, myquad(xtest, popt[0], popt[1], popt[2]), '--r', zorder=2)
-plt.xlabel('Voltage (V)')
-plt.ylabel('Current (pA)')
-
-plt.savefig(path + '\Fig1.png')
+# plt.errorbar(x=peak_employee_count, y=perm_full_time_count, yerr=y_err, linestyle='None', fmt='x', capsize=2, label='Error')
+plt.plot(newx, A(temp, can_pressure_list) + B(temp, can_pressure_list)*newx, color='black', label='Model')
+plt.xlabel('Peak Employee Count')
+plt.ylabel('Permanent Full Time Count')
+plt.legend(loc=0)
+plt.savefig(path1 + '\MyFigure.png')
