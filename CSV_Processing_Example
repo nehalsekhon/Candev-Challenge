@@ -1,0 +1,35 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import math
+from tkinter.filedialog import askdirectory
+import matplotlib
+from scipy import optimize
+
+path = askdirectory(title='Select Folder')
+
+df = pd.read_csv(path+'\Trial1.csv')
+voltage = df['Voltage'].values
+current = df['Current'].values
+
+def myquad(x, a,b,c):
+  return a*(x-b)**2+c
+
+databool = (voltage>11.5)*(voltage<14)
+
+popt, pcov = optimize.curve_fit(myquad,
+                                voltage[databool],
+                                current[databool],
+                                [50, 4.5, 40]
+                                )
+
+xtest = np.linspace(11.5, 14, 101)
+plt.errorbar(voltage, current, zorder=1)
+plt.plot(xtest, myquad(xtest, popt[0], popt[1], popt[2]), '--r', zorder=2)
+plt.xlabel('Voltage (V)')
+plt.ylabel('Current (pA)')
+
+perr = np.sqrt(np.diag(pcov))
+print('V1 = ', popt[1], '+/-', perr[1], 'V')
+
+plt.savefig(path + '\Fig1.png')
