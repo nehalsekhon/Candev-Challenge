@@ -13,7 +13,7 @@ df = pd.read_csv(path+'\Trial1.csv')
 voltage = df['Voltage'].values
 current = df['Current'].values
 
-# Linear Fit 
+# Linear Least Squares Fit
 def Delta(x):
   return len(x)*np.sum(x**2)-np.sum(x)**2
 def A(x,y):
@@ -27,8 +27,5 @@ plt.errorbar(voltage, current, zorder=1)
 plt.plot(xtest, myquad(xtest, popt[0], popt[1], popt[2]), '--r', zorder=2)
 plt.xlabel('Voltage (V)')
 plt.ylabel('Current (pA)')
-
-perr = np.sqrt(np.diag(pcov))
-print('V1 = ', popt[1], '+/-', perr[1], 'V')
 
 plt.savefig(path + '\Fig1.png')
