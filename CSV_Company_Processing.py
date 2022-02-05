@@ -77,3 +77,169 @@ for i in range(year_min, year_max):
     # plt.title(employer_selection + 'Employees in Minority Groups Over Time')
     # # plt.legend(loc=0)
     # plt.savefig('employee_groups_over_time_' + employer_selection)
+    
+#         for j in range (0, len(employer)-1):
+#         if employer[j] == employer_selection:
+#             if country[j] == "Canada":
+#                 if employment_status[j] == "Full-Time":
+#                     if salary_range[j] == "Under $15,000":
+#                         u15K_employees = total_employees[j]
+#                         u15K_male = total_male[j]
+#                         u15K_women = total_women[j]
+#                         u15K_aboriginal = total_aboriginal[j]
+#                         u15K_disabled = total_disabled[j]
+#                         u15K_vis_min = total_vis_min[j]
+#                         u15K_aboriginal_women = total_aboriginal_women[j]
+#                         u15K_disabled_women = total_disabled_women[j]
+#                         u15K_vis_min_women = total_vis_min_women[j]
+#                         u15Kminority_ratio = (u15K_women + u15K_aboriginal + u15K_disabled + u15K_vis_min - u15K_aboriginal_women - u15K_disabled_women - u15K_vis_min_women)/u15K_employees
+#                         print(u15K_employees)
+#                     if salary_range[j] == "$ 15,000 - $19,999":
+#                         p15K_employees = total_employees[j]
+#                         p15K_male = total_male[j]
+#                         p15K_women = total_women[j]
+#                         p15K_aboriginal = total_aboriginal[j]
+#                         p15K_disabled = total_disabled[j]
+#                         p15K_vis_min = total_vis_min[j]
+#                         p15K_aboriginal_women = total_aboriginal_women[j]
+#                         p15K_disabled_women = total_disabled_women[j]
+#                         p15K_vis_min_women = total_vis_min_women[j]
+#                         p15Kminority_ratio = (p15K_women + p15K_aboriginal + p15K_disabled + p15K_vis_min - p15K_aboriginal_women - p15K_disabled_women - p15K_vis_min_women)/p15K_employees
+#                     if salary_range[j] == "$ 20,000 - $24,999":
+#                         p20K_employees = total_employees[j]
+#                         p20K_male = total_male[j]
+#                         p20K_women = total_women[j]
+#                         p20K_aboriginal = total_aboriginal[j]
+#                         p20K_disabled = total_disabled[j]
+#                         p20K_vis_min = total_vis_min[j]
+#                         p20K_aboriginal_women = total_aboriginal_women[j]
+#                         p20K_disabled_women = total_disabled_women[j]
+#                         p20K_vis_min_women = total_vis_min_women[j]
+#                         p20Kminority_ratio = (p20K_women + p20K_aboriginal + p20K_disabled + p20K_vis_min - p20K_aboriginal_women - p20K_disabled_women - p20K_vis_min_women)/p20K_employees
+#                     if salary_range[j] == "$ 25,000 - $29,999":
+#                         p25K_employees = total_employees[j]
+#                         p25K_male = total_male[j]
+#                         p25K_women = total_women[j]
+#                         p25K_aboriginal = total_aboriginal[j]
+#                         p25K_disabled = total_disabled[j]
+#                         p25K_vis_min = total_vis_min[j]
+#                         p25K_aboriginal_women = total_aboriginal_women[j]
+#                         p25K_disabled_women = total_disabled_women[j]
+#                         p25K_vis_min_women = total_vis_min_women[j]
+#                         p25Kminority_ratio = (p25K_women + p25K_aboriginal + p25K_disabled + p25K_vis_min - p25K_aboriginal_women - p25K_disabled_women - p25K_vis_min_women)/p25K_employees
+#                     if salary_range[j] == "$ 30,000 - $34,999":
+#                         p30K_employees = total_employees[j]
+#                         p30K_male = total_male[j]
+#                         p30K_women = total_women[j]
+#                         p30K_aboriginal = total_aboriginal[j]
+#                         p30K_disabled = total_disabled[j]
+#                         p30K_vis_min = total_vis_min[j]
+#                         p30K_aboriginal_women = total_aboriginal_women[j]
+#                         p30K_disabled_women = total_disabled_women[j]
+#                         p30K_vis_min_women = total_vis_min_women[j]
+#                         p30Kminority_ratio = (p30K_women + p30K_aboriginal + p30K_disabled + p30K_vis_min - p30K_aboriginal_women - p30K_disabled_women - p30K_vis_min_women)/p30K_employees
+#                     if salary_range[j] == "$ 35,000 - $37,499":
+#                         p35K_employees = total_employees[j]
+#                         p35K_male = total_male[j]
+#                         p35K_women = total_women[j]
+#                         p35K_aboriginal = total_aboriginal[j]
+#                         p35K_disabled = total_disabled[j]
+#                         p35K_vis_min = total_vis_min[j]
+#                         p35K_aboriginal_women = total_aboriginal_women[j]
+#                         p35K_disabled_women = total_disabled_women[j]
+#                         p35K_vis_min_women = total_vis_min_women[j]
+#                         p35Kminority_ratio = (p35K_women + p35K_aboriginal + p35K_disabled + p35K_vis_min - p35K_aboriginal_women - p35K_disabled_women - p35K_vis_min_women)/p35K_employees
+#                     if salary_range[j] == "$ 37,500 - $39,999":
+#                         p37K_employees = total_employees[j]
+#                         p37K_male = total_male[j]
+#                         p37K_women = total_women[j]
+#                         p37K_aboriginal = total_aboriginal[j]
+#                         p37K_disabled = total_disabled[j]
+#                         p37K_vis_min = total_vis_min[j]
+#                         p37K_aboriginal_women = total_aboriginal_women[j]
+#                         p37K_disabled_women = total_disabled_women[j]
+#                         p37K_vis_min_women = total_vis_min_women[j]
+#                         p37Kminority_ratio = (p37K_women + p37K_aboriginal + p37K_disabled + p37K_vis_min - p37K_aboriginal_women - p37K_disabled_women - p37K_vis_min_women)/p37K_employees
+#                     if salary_range[j] == "$ 40,000 - $44,999":
+#                         p40K_employees = total_employees[j]
+#                         p40K_male = total_male[j]
+#                         p40K_women = total_women[j]
+#                         p40K_aboriginal = total_aboriginal[j]
+#                         p40K_disabled = total_disabled[j]
+#                         p40K_vis_min = total_vis_min[j]
+#                         p40K_aboriginal_women = total_aboriginal_women[j]
+#                         p40K_disabled_women = total_disabled_women[j]
+#                         p40K_vis_min_women = total_vis_min_women[j]
+#                         p40Kminority_ratio = (p40K_women + p40K_aboriginal + p40K_disabled + p40K_vis_min - p40K_aboriginal_women - p40K_disabled_women - p40K_vis_min_women)/p40K_employees
+#                     if salary_range[j] == "$ 45,000 - $49,999":
+#                         p45K_employees = total_employees[j]
+#                         p45K_male = total_male[j]
+#                         p45K_women = total_women[j]
+#                         p45K_aboriginal = total_aboriginal[j]
+#                         p45K_disabled = total_disabled[j]
+#                         p45K_vis_min = total_vis_min[j]
+#                         p45K_aboriginal_women = total_aboriginal_women[j]
+#                         p45K_disabled_women = total_disabled_women[j]
+#                         p45K_vis_min_women = total_vis_min_women[j]
+#                         p45Kminority_ratio = (p45K_women + p45K_aboriginal + p45K_disabled + p45K_vis_min - p45K_aboriginal_women - p45K_disabled_women - p45K_vis_min_women)/p45K_employees
+#                     if salary_range[j] == "$ 50,000 - $59,999":
+#                         p50K_employees = total_employees[j]
+#                         p50K_male = total_male[j]
+#                         p50K_women = total_women[j]
+#                         p50K_aboriginal = total_aboriginal[j]
+#                         p50K_disabled = total_disabled[j]
+#                         p50K_vis_min = total_vis_min[j]
+#                         p50K_aboriginal_women = total_aboriginal_women[j]
+#                         p50K_disabled_women = total_disabled_women[j]
+#                         p50K_vis_min_women = total_vis_min_women[j]
+#                         p50Kminority_ratio = (p50K_women + p50K_aboriginal + p50K_disabled + p50K_vis_min - p50K_aboriginal_women - p50K_disabled_women - p50K_vis_min_women)/p50K_employees
+#                     if salary_range[j] == "$ 60,000 - $69,999":
+#                         p60K_employees = total_employees[j]
+#                         p60K_male = total_male[j]
+#                         p60K_women = total_women[j]
+#                         p60K_aboriginal = total_aboriginal[j]
+#                         p60K_disabled = total_disabled[j]
+#                         p60K_vis_min = total_vis_min[j]
+#                         p60K_aboriginal_women = total_aboriginal_women[j]
+#                         p60K_disabled_women = total_disabled_women[j]
+#                         p60K_vis_min_women = total_vis_min_women[j]
+#                         p60Kminority_ratio = (p60K_women + p60K_aboriginal + p60K_disabled + p60K_vis_min - p60K_aboriginal_women - p60K_disabled_women - p60K_vis_min_women)/p60K_employees
+#                     if salary_range[j] == "$ 70,000 - $84,999":
+#                         p70K_employees = total_employees[j]
+#                         p70K_male = total_male[j]
+#                         p70K_women = total_women[j]
+#                         p70K_aboriginal = total_aboriginal[j]
+#                         p70K_disabled = total_disabled[j]
+#                         p70K_vis_min = total_vis_min[j]
+#                         p70K_aboriginal_women = total_aboriginal_women[j]
+#                         p70K_disabled_women = total_disabled_women[j]
+#                         p70K_vis_min_women = total_vis_min_women[j]
+#                         p70Kminority_ratio = (p70K_women + p70K_aboriginal + p70K_disabled + p70K_vis_min - p70K_aboriginal_women - p70K_disabled_women - p70K_vis_min_women)/p70K_employees
+#                     if salary_range[j] == "$ 85,000 - $99,999":
+#                         p85K_employees = total_employees[j]
+#                         p85K_male = total_male[j]
+#                         p85K_women = total_women[j]
+#                         p85K_aboriginal = total_aboriginal[j]
+#                         p85K_disabled = total_disabled[j]
+#                         p85K_vis_min = total_vis_min[j]
+#                         p85K_aboriginal_women = total_aboriginal_women[j]
+#                         p85K_disabled_women = total_disabled_women[j]
+#                         p85K_vis_min_women = total_vis_min_women[j]
+#                         p85Kminority_ratio = (p85K_women + p85K_aboriginal + p85K_disabled + p85K_vis_min - p85K_aboriginal_women - p85K_disabled_women - p85K_vis_min_women)/p85K_employees
+#                     if salary_range[j] == "$100,000 and over":
+#                         p100K_employees = total_employees[j]
+#                         p100K_male = total_male[j]
+#                         p100K_women = total_women[j]
+#                         p100K_aboriginal = total_aboriginal[j]
+#                         p100K_disabled = total_disabled[j]
+#                         p100K_vis_min = total_vis_min[j]
+#                         p100K_aboriginal_women = total_aboriginal_women[j]
+#                         p100K_disabled_women = total_disabled_women[j]
+#                         p100K_vis_min_women = total_vis_min_women[j]
+#                         p100Kminority_ratio = (p100K_women + p100K_aboriginal + p100K_disabled + p100K_vis_min - p100K_aboriginal_women - p100K_disabled_women - p100K_vis_min_women)/p100K_employees
+#                     fig3 = plt.figure()
+#                     ax = fig3.add_axes([0,0,1,1])
+#                     salary = ['Under $15,000', '$ 15,000 - $19,999', '$ 20,000 - $24,999', '$ 25,000 - $29,999', '$ 30,000 - $34,999', '$ 35,000 - $37,499', '$ 37,500 - $39,999', '$ 40,000 - $44,999', '$ 45,000 - $49,999', '$ 50,000 - $59,999', '$ 60,000 - $69,999', '$ 70,000 - $84,999', '$ 85,000 - $99,999', '$100,000 and over']
+#                     minority_ratio = [u15Kminority_ratio, p15Kminority_ratio, p20Kminority_ratio, p25Kminority_ratio, p30Kminority_ratio, p35Kminority_ratio, p37Kminority_ratio, p40Kminority_ratio, p45Kminority_ratio, p50Kminority_ratio, p60Kminority_ratio, p70Kminority_ratio, p85Kminority_ratio, p100Kminority_ratio]
+#                     ax.bar(salary, minority_ratio)
+#                     plt.savefig('minority_ratio_salary' + employer_selection)        
