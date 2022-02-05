@@ -43,3 +43,35 @@ for i in range(year_min, year_max):
                         fig = plt.figure(figsize =(10, 7))
                         plt.pie(data, labels = minority_categories)
                         plt.savefig('Minority_Distributions_' + employer_selection + str(i) + '.png')
+
+                        # Set up data for distribution over time
+                        male_overTime = np.append(male_overTime, ft_male)
+                        women_overTime = np.append(women_overTime, ft_women)
+                        aboriginal_overTime = np.append(aboriginal_overTime, ft_aboriginal)
+                        vis_min_overTime = np.append(vis_min_overTime, ft_vis_min)                        
+                        disabled_overTime = np.append(disabled_overTime, ft_disabled)
+    year_overTime = np.append(year_overTime, int(i))
+
+# Plot minority groups over time graph
+# def Delta(x):
+#   return len(x)*np.sum(x**2)-np.sum(x)**2
+# def A(x,y):
+#   return (np.sum(x**2)*np.sum(y)-np.sum(x)*np.sum(x*y))/Delta(x)
+# def B(x,y):
+#   return (len(x)*np.sum(x*y)-np.sum(x)*np.sum(y))/Delta(x)
+# delta_year = year_max - year_min
+# newx = np.linspace(year_min, year_max, delta_year + 1)
+plt.plot(male_overTime, year_overTime, color='black', label='Linear Model')
+plt.plot(women_overTime, year_overTime, color='blue', label='Linear Model')
+plt.plot(aboriginal_overTime, year_overTime, color='red', label='Linear Model')
+plt.plot(vis_min_overTime, year_overTime, color='orange', label='Linear Model')
+plt.plot(disabled_overTime, year_overTime, color='yellow', label='Linear Model')
+# plt.plot(newx, A(women_overTime, year_overTime) + B(women_overTime, year_overTime)*newx, color='blue', label='Linear Model')
+# plt.plot(newx, A(aboriginal_overTime, year_overTime) + B(aboriginal_overTime, year_overTime)*newx, color='red', label='Linear Model')
+# plt.plot(newx, A(vis_min_overTime, year_overTime) + B(vis_min_overTime, year_overTime)*newx, color='orange', label='Linear Model')
+# plt.plot(newx, A(disabled_overTime, year_overTime) + B(disabled_overTime, year_overTime)*newx, color='yellow', label='Linear Model')
+plt.xlabel('Year')
+plt.ylabel('Number of Employees in Groups')
+plt.title(employer_selection + 'Employees in Minority Groups over time.png')
+plt.legend(loc=0)
+plt.savefig('employee_groups_over_time_' + employer_selection)
