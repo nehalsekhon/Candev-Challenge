@@ -27,6 +27,7 @@ for i in range(year_min, year_max):
     total_vis_min_men = df['VISMINMENCOUNT'].fillna(0).values
     total_vis_min_women = df['VISMINWOMENCOUNT'].fillna(0).values
 
+    #----- Code for Pie Graph of Employment Equity Group Distribution in a Year-----#
     for j in range (0, len(employer)-1):
         if employer[j] == employer_selection:
             if salary_range[j] == "Overall":
@@ -44,13 +45,14 @@ for i in range(year_min, year_max):
                         plt.pie(data, labels = minority_categories)
                         plt.savefig('Minority_Distributions_' + employer_selection + str(i) + '.png')
 
-                        # Set up data for distribution over time
-                        male_overTime = np.append(male_overTime, ft_male)
-                        women_overTime = np.append(women_overTime, ft_women)
-                        aboriginal_overTime = np.append(aboriginal_overTime, ft_aboriginal)
-                        vis_min_overTime = np.append(vis_min_overTime, ft_vis_min)                        
-                        disabled_overTime = np.append(disabled_overTime, ft_disabled)
-    year_overTime = np.append(year_overTime, int(i))
+#----- Code for number of employment equity group employees over time -----# NEED FIXES
+#                         # Set up data for distribution over time
+#                         male_overTime = np.append(male_overTime, ft_male)
+#                         women_overTime = np.append(women_overTime, ft_women)
+#                         aboriginal_overTime = np.append(aboriginal_overTime, ft_aboriginal)
+#                         vis_min_overTime = np.append(vis_min_overTime, ft_vis_min)                        
+#                         disabled_overTime = np.append(disabled_overTime, ft_disabled)
+#     year_overTime = np.append(year_overTime, int(i))
 
     # # Plot minority groups over time graph
     # def Delta(x):
@@ -79,7 +81,7 @@ for i in range(year_min, year_max):
     # plt.savefig('employee_groups_over_time_' + employer_selection)
     
 
-# Code for Bar Graph: "Percentage of Employees in Employment Equity Groups by Salary"
+#----- Code for Bar Graph: "Percentage of Employees in Employment Equity Groups by Salary" -----#
     minority_ratio = []
     for j in range (0, len(employer)-1):
         if employer[j] == employer_selection:
