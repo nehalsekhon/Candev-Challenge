@@ -10,22 +10,22 @@ year_max = int(input("Input maximum year: "))
 
 for i in range(year_min, year_max):
     df = pd.read_csv('Dataset/' + str(i) + '/Form3.csv', encoding = "ISO-8859-1")
-    employer = df['EMPLOYERNAME'].values
-    salary_range = df['SALARYRANGE($)'].values
-    country = df['LOCATION'].values
-    employment_status = df["EMPLOYMENTSTATUS"].values
-    total_employees = df['ALLCOUNT'].values
-    total_male = df['ALLMENCOUNT'].values
-    total_women = df['ALLWOMENCOUNT'].values
-    total_aboriginal = df['ABORIGALLCOUNT'].values
-    total_aboriginal_men = df['ABORIGMENCOUNT'].values
-    total_aboriginal_women = df['ABORIGWOMENCOUNT'].values
-    total_disabled = df['PWDALLCOUNT'].values
-    total_disabled_women = df['PWDMENCOUNT'].values
-    total_disabled_women = df['PWDWOMENCOUNT'].values
-    total_vis_min = df['VISMINALLCOUNT'].values
-    total_vis_min_men = df['VISMINMENCOUNT'].values
-    total_vis_min_women = df['VISMINWOMENCOUNT'].values
+    employer = df['EMPLOYERNAME'].fillna(0).values
+    salary_range = df['SALARYRANGE($)'].fillna(0).values
+    country = df['LOCATION'].fillna(0).values
+    employment_status = df["EMPLOYMENTSTATUS"].fillna(0).values
+    total_employees = df['ALLCOUNT'].fillna(0).values
+    total_male = df['ALLMENCOUNT'].fillna(0).values
+    total_women = df['ALLWOMENCOUNT'].fillna(0).values
+    total_aboriginal = df['ABORIGALLCOUNT'].fillna(0).values
+    total_aboriginal_men = df['ABORIGMENCOUNT'].fillna(0).values
+    total_aboriginal_women = df['ABORIGWOMENCOUNT'].fillna(0).values
+    total_disabled = df['PWDALLCOUNT'].fillna(0).values
+    total_disabled_women = df['PWDMENCOUNT'].fillna(0).values
+    total_disabled_women = df['PWDWOMENCOUNT'].fillna(0).values
+    total_vis_min = df['VISMINALLCOUNT'].fillna(0).values
+    total_vis_min_men = df['VISMINMENCOUNT'].fillna(0).values
+    total_vis_min_women = df['VISMINWOMENCOUNT'].fillna(0).values
 
     for j in range (0, len(employer)-1):
         if employer[j] == employer_selection:
