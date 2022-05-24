@@ -1,3 +1,3 @@
 # Candev-Challenge
 
-<img src="images/tables.jpg" width="128"/>
+<img src="images/tables.jpg"/>
