@@ -2,4 +2,4 @@
 
 <img src="images/tables.jpg"/>
 
-<img src="images/candevdashboard.pdf"/>
+<img src="images/dashboard.jpg"/>
